@@ -32,10 +32,6 @@ body {
     float: left; 
 }
 
-/* .row [class^="col-"]:not(:last-child) {
-    margin-right: .5rem; 
-} */
-
 .row .col-1-of-1 {
     width: 100%;
     background-color: #fff;
