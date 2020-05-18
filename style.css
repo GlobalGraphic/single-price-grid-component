@@ -1,1 +1,77 @@
 /* font-family: 'Karla', sans-serif; */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
+
+body {
+  box-sizing: border-box; 
+  font-family: 'Karla', sans-serif;
+}
+
+.row {
+    max-width: 60rem;
+    height: 40rem;
+    margin: 0 auto;
+    background-color: red;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    margin-top: 5%;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both; 
+}
+
+.row [class^="col-"] {
+    float: left; 
+}
+
+/* .row [class^="col-"]:not(:last-child) {
+    margin-right: .5rem; 
+} */
+
+.row .col-1-of-1 {
+    width: 100%;
+    background-color: #fff;
+    height: 45%;
+    padding: 4.5rem;
+}
+
+.row .col-1-of-1 h1 {
+   font-weight: 700;
+   color: hsl(179, 62%, 43%);
+   font-size: 28px;
+   margin-bottom: 1rem;
+}
+
+.row .col-1-of-1 h2 {
+    font-weight: 700;
+    color: hsl(71, 73%, 54%);
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+.row .col-1-of-1 p {
+    font-weight: 700;
+    color: hsl(218, 22%, 67%);
+    font-size: 20px;
+}
+
+.row .col-1-of-2 {
+    width: calc((100% - .0rem) / 2);
+    height: 55%;
+}
+
+.row .col-1-of-2:nth-child(2) {
+    background-color: hsl(179, 62%, 43%);
+}
+
+.row .col-1-of-2:nth-child(3) {
+    background-color: hsl(71, 73%, 54%);
+}
